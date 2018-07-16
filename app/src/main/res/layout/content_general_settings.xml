@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".GeneralSettingsActivity"
+    tools:showIn="@layout/activity_general_settings">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/ingredients"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_local_florist_black_80dp"
+                android:onClick="startIngredientSettings"
+                android:text="@string/ingredients_settings"
+                android:textAlignment="textStart" />
+
+            <Button
+                android:id="@+id/recipes"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:drawableStart="@drawable/ic_local_drink_black_80dp"
+                android:onClick="startRecipeSettings"
+                android:text="@string/cocktails_settings"
+                android:textAlignment="textStart" />
+
+            <Button
+                android:id="@+id/bluetooth"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_bluetooth_black_80dp"
+                android:onClick="startBluetoothSettings"
+                android:text="@string/bluetooth_settings"
+                android:textAlignment="textStart" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

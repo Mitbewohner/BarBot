@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tutorial">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="BarBot"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ListOfCocktails"
+            android:label="@string/title_activity_list_of_cocktails"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+
+
+        <activity
+            android:name=".GeneralSettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".ListOfCocktails"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorial.ListOfCocktails" />
+        </activity>
+        <activity
+            android:name=".ListOfIngredients"
+            android:label="@string/title_activity_ingredients_settings"
+            android:parentActivityName=".GeneralSettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorial.GeneralSettingsActivity" />
+        </activity>
+        <activity
+            android:name=".RecipesSettings"
+            android:label="@string/title_activity_recipes_settings"
+            android:parentActivityName=".GeneralSettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorial.GeneralSettingsActivity" />
+        </activity>
+        <activity
+            android:name=".BluetoothSettings"
+            android:label="@string/title_activity_bluetooth_settings"
+            android:parentActivityName=".GeneralSettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorial.GeneralSettingsActivity" />
+        </activity>
+        <activity
+            android:name=".IngredientSetting"
+            android:label="@string/title_activity_ingredient_settings"
+            android:parentActivityName=".ListOfIngredients"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorial.ListOfIngredients" />
+        </activity>
+        <activity
+            android:name=".AddIngredient"
+            android:label="@string/title_activity_add_ingredient"
+            android:parentActivityName=".ListOfIngredients"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorial.ListOfIngredients" />
+        </activity>
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecipeSetting"
+            android:label="@string/title_activity_recipe_setting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AddRecipe" />
+    </application>
+
+</manifest>
